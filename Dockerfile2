@@ -1,6 +1,6 @@
 FROM eclipse-temurin:8-jdk-alpine as builder
 RUN mkdir /demo
-COPY ./* /demo/
+ADD ./* /demo/
 WORKDIR /demo
 RUN ls -al /demo && ./mvnw package
 
